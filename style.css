@@ -1,0 +1,30 @@
+
+.grid-container {
+  margin-top: 20px;
+  margin-left: 350px;
+  display: inline-grid;
+}
+
+.border{
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+}
+
+input{
+  margin: 20px;
+  border: 2px solid black;
+}
+input:hover{
+  position: relative;
+  box-shadow: 4px 2px 2px black;
+}
+
+#btnGrilla{
+  display: block;
+  margin: 20px;
+}
+
+
+
+

@@ -8,9 +8,18 @@ const btnLapiz=document.getElementById("lapiz");
 const btnGoma=document.getElementById("goma");
 let estaPintando=true;
 
-btnGoma.addEventListener("click",function{
-    
-}
+btnGoma.addEventListener("click",function(){
+    estaPintando=false;
+    btnLapiz.classList.toggle("resaltado-botones");
+    btnGoma.classList.toggle("resaltado-botones");
+});
+
+btnLapiz.addEventListener("click", function () {
+  estaPintando = true;
+  btnLapiz.classList.toggle("resaltado-botones");
+  btnGoma.classList.toggle("resaltado-botones");
+});
+
 btnGrilla.addEventListener("click", function(){
     container.innerHTML = "";
     container.style.gridTemplateColumns = `repeat(${inputFila.value}, 1fr)`;
@@ -20,16 +29,15 @@ btnGrilla.addEventListener("click", function(){
             
             celda.classList.add("border");
 
-
-
             celda.style.background = `${colorFondo.value}`;
             
             celda.addEventListener("click", function(){
-                celda.style.background = `${aplicarColor.value}`;
-            });
-            
-            celda.addEventListener("dblclick", function(){
-                celda.style.background = `${colorFondo.value}`;
+                if (estaPintando){
+                    celda.style.background = `${aplicarColor.value}`;
+                }else{
+                    celda.style.background = `${colorFondo.value}`;
+                }
+                
             });
 
             container.appendChild(celda);

@@ -36,8 +36,7 @@ btnGrilla.addEventListener("click", function(){
                     celda.style.background = `${aplicarColor.value}`;
                 }else{
                     celda.style.background = `${colorFondo.value}`;
-                }
-                
+                }               
             });
 
             container.appendChild(celda);

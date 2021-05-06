@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <input type="number" id="inputFila" placeholder="Filas">
-        <input type="number" id="inputColumna" placeholder="Columnas">
-        <label> Color</label>
-        <input type="color" id="aplicarColor">
-        <input type="button" id="btnGrilla" value="Crear">
-        <label>Fondo </label>
-        <input type="color" id="colorFondo">
-        <button class="resaltado-botones" id="lapiz">Lapiz</button>
-        <button id="goma">Borrar</button>
-    </div>
-    <div id="container" class="grid-container"></div>
+    <header>
+        <div class="prueba">
+            <input type="number" id="inputFila" placeholder="Filas">
+            <input type="number" id="inputColumna" placeholder="Columnas">
+            <input type="number" id="tamañoCelda" placeholder="Tamaño">
+            <label>Bordes</label>
+            <input type="checkbox"id="checkBordes" class="border" checked="checked">
+            <input type="button" class="btnCrear" id="btnCrear" value="Crear">
+        </div>
+        <div>
+            <label> Color</label>
+            <input type="color" id="aplicarColor">
+            <label>Fondo </label>
+            <input type="color" id="colorFondo">
+            <button class="resaltado-botones img-btn lapiz" id="lapiz"></button>
+            <button id="goma"  class="img-btn goma"></button>
+        </div>
+    </header>
+    <section>
+        <div id="container" class="grid-container"></div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

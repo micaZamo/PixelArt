@@ -9,24 +9,24 @@
 <body>
     <header>
         <div class="prueba">
-            <input type="number" id="inputFila" placeholder="Filas">
-            <input type="number" id="inputColumna" placeholder="Columnas">
-            <input type="number" id="tamañoCelda" placeholder="Tamaño">
+            <input type="number" min="0" id="inputFila" placeholder="Filas">
+            <input type="number" min="0" id="inputColumna" placeholder="Columnas">
+            <input type="number" min="0" id="tamañoCelda" placeholder="Tamaño">
             <label>Bordes</label>
-            <input type="checkbox"id="checkBordes" class="border" checked="checked">
-            <input type="button" class="btnCrear" id="btnCrear" value="Crear">
+            <input type="checkbox"id="bordes" class="border" checked="checked">
+            <input type="button" class="btnReiniciar" id="btnReiniciar" value="Reiniciar">
         </div>
         <div>
             <label> Color</label>
             <input type="color" id="aplicarColor">
             <label>Fondo </label>
-            <input type="color" id="colorFondo">
+            <input type="color" id="colorFondo" value="#ffffff">
             <button class="resaltado-botones img-btn lapiz" id="lapiz"></button>
             <button id="goma"  class="img-btn goma"></button>
         </div>
     </header>
     <section>
-        <div id="container" class="grid-container"></div>
+        <div id="contenedor" class="grid-container"></div>
     </section>
     <script src="script.js"></script>
 </body>
